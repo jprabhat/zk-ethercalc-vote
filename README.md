@@ -20,8 +20,10 @@ It demonstrates how **ZK/NFT-based governance** and **collaborative tools like E
 
 ✅ Successfully executed and understood both required base modules from the [ZK Medical Billing Platform](https://github.com/seetadev/ZKMedical-Billing):
 
-1. [Medi_Token](https://github.com/seetadev/ZKMedical-Billing/tree/main/Medi_Token)
-2. [medical-invoice-ionic-tokengated](https://github.com/seetadev/ZKMedical-Billing/tree/main/medical-invoice-ionic-tokengated)
+1. ![Medi_Token](./screenshots/Medi-token-1.png)
+2. ![contract_adsress](https://sepolia.etherscan.io/address/0x9df039A8c3200E96A068cBDF36F63F29E6ef36c0)
+2. ![medical-invoice-ionic-tokengated](./screenshots/ionic-tokengated-1.png)
+4. ![medical-invoice-ionic-tokengated](./screenshots/ionic-tokengated-2.png)
 
 Screenshots and demo are attached below and in the `/screenshots` folder.
 
