@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vote with Ethercalc</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        button {
+            background-color: #f6851b;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px 0;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #e2761b;
+        }
+        button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+        #status {
+            margin: 15px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .error {
+            background-color: #ffebee;
+            color: #c62828;
+        }
+        .success {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+        }
+        #userInfo {
+            margin-top: 20px;
+            display: none;
+        }
+        #debugConsole {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            font-family: monospace;
+            background-color: #f5f5f5;
+        }
+    </style>
+   <!-- Load Ethers.js with integrity check -->
+   <script src="../lib/ethers.umd.min.js"></script>
+</head>
+<body>
+    <h1>🗳️ Vote with NFT + Ethercalc Score</h1>
+    
+    <button id="connectBtn">Connect Wallet</button>
+    <div id="status">Connect your wallet to vote</div>
+    <button id="voteBtn" disabled>Vote</button>
+    
+    <div id="userInfo">
+        <h3>Your Information</h3>
+        <p><strong>Address:</strong> <span id="userAddress"></span></p>
+        <p><strong>Ethercalc Score:</strong> <span id="userScore">Loading...</span></p>
+        <p><strong>Voting Status:</strong> <span id="votingStatus">Checking...</span></p>
+    </div>
+
+    <div id="debugConsole"></div>
+
+    <script>
+        // Verify Ethers.js loaded before main.js
+        function checkEthers() {
+            if (typeof ethers === 'undefined') {
+                document.getElementById('status').textContent = "Ethers.js failed to load - please refresh";
+                document.getElementById('status').className = "error";
+                document.getElementById('connectBtn').disabled = true;
+                throw new Error("Ethers.js not loaded");
+            }
+        }
+        checkEthers();
+    </script>
+    <script src="main.js"></script>
+</body>
+</html>
